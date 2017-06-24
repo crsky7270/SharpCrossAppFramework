@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SharpCrossAppFramework
+namespace SharpCrossAppFramework.ViewModels
 {
 	public class BaseViewModel
 	{

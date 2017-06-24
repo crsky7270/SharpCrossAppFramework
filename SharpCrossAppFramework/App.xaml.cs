@@ -1,29 +1,32 @@
-﻿using Xamarin.Forms;
+﻿using Prism.Unity;
 
 namespace SharpCrossAppFramework
 {
-	public partial class App : Application
+	public partial class App : PrismApplication
 	{
-		public App()
+		public App(IPlatformInitializer initializer = null)
+			: base(initializer)
+		{
+
+		}
+
+		/// <summary>
+		/// Init Component and Nav to MainPage
+		/// </summary>
+		protected override void OnInitialized()
 		{
 			InitializeComponent();
-
-			MainPage = new SharpCrossAppFrameworkPage();
+			NavigationService.NavigateAsync("MainPage");
 		}
 
-		protected override void OnStart()
+		/// <summary>
+		/// Registers the types.
+		/// </summary>
+		protected override void RegisterTypes()
 		{
-			// Handle when your app starts
+			Container.RegisterTypeForNavigation<MainPage>();
+			Container.RegisterTypeForNavigation<SecondPage>();
 		}
 
-		protected override void OnSleep()
-		{
-			// Handle when your app sleeps
-		}
-
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
-		}
 	}
 }

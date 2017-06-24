@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Microsoft.Practices.Unity;
+using Prism.Unity;
 using UIKit;
 
 namespace SharpCrossAppFramework.iOS
@@ -14,9 +16,20 @@ namespace SharpCrossAppFramework.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			LoadApplication(new App());
+			LoadApplication(new App(new iOSInitializer()));
 
 			return base.FinishedLaunching(app, options);
+		}
+
+		/// <summary>
+		/// IOS Initializer.
+		/// </summary>
+		public class iOSInitializer : IPlatformInitializer
+		{
+			public void RegisterTypes(IUnityContainer container)
+			{
+				//throw new NotImplementedException();
+			}
 		}
 	}
 }
