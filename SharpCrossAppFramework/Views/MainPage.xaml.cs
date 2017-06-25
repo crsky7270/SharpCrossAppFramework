@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace SharpCrossAppFramework
+namespace SharpCrossAppFramework.Views
 {
 	public partial class MainPage : ContentPage
 	{

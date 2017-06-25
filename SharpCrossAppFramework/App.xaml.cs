@@ -1,5 +1,6 @@
 ﻿using Prism.Unity;
-
+using SharpCrossAppFramework.Views;
+using SharpCrossAppFramework.ViewModels;
 namespace SharpCrossAppFramework
 {
 	public partial class App : PrismApplication
@@ -16,7 +17,7 @@ namespace SharpCrossAppFramework
 		protected override void OnInitialized()
 		{
 			InitializeComponent();
-			NavigationService.NavigateAsync("MainPage");
+			NavigationService.NavigateAsync("MainPage?Title=Hello");
 		}
 
 		/// <summary>

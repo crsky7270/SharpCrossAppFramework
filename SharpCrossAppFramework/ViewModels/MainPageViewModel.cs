@@ -5,7 +5,7 @@ using Prism.Navigation;
 
 namespace SharpCrossAppFramework.ViewModels
 {
-	public class MainPageViewModel : BindableBase, INavigationAware
+	public class MainPageViewModel : BindableBase, INavigationAware //BaseViewModel
 	{
 		private INavigationService _navigationService;
 		private string _title = "Hello Sharp Cross";
@@ -26,9 +26,10 @@ namespace SharpCrossAppFramework.ViewModels
 		public MainPageViewModel(INavigationService navigationService)
 		{
 			_navigationService = navigationService;
+			LoadSecondCommand = new DelegateCommand(Navigate);
 		}
 
-		async void Navigate()
+		private async void Navigate()
 		{
 			await _navigationService.NavigateAsync("SecondPage");
 		}
