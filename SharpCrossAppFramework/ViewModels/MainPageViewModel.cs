@@ -36,7 +36,7 @@ namespace SharpCrossAppFramework.ViewModels
 
 		public void OnNavigatedFrom(NavigationParameters parameters)
 		{
-			//throw new NotImplementedException();
+			
 		}
 
 		public void OnNavigatedTo(NavigationParameters parameters)
@@ -45,12 +45,11 @@ namespace SharpCrossAppFramework.ViewModels
 			{
 				Title = (string)parameters["title"] + " and prism";
 			}
-			//throw new NotImplementedException();
 		}
 
 		public void OnNavigatingTo(NavigationParameters parameters)
 		{
-			//throw new NotImplementedException();
+			
 		}
 	}
 }
