@@ -5,10 +5,10 @@ using Prism.Navigation;
 
 namespace SharpCrossAppFramework.ViewModels
 {
-	public class MainPageViewModel : BindableBase, INavigationAware //BaseViewModel
+	public class MainPageViewModel : BindableBase, INavigationAware
 	{
 		private INavigationService _navigationService;
-		private string _title = "Hello Sharp Cross";
+		private string _title = "Hello Sharp Cross!";
 		public string Title
 		{
 			get
