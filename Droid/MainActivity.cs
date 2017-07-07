@@ -19,6 +19,10 @@ namespace SharpCrossAppFramework.Droid
 	          ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
+		/// <summary>
+		/// Ons the create.
+		/// </summary>
+		/// <param name="bundle">Bundle.</param>
 		protected override void OnCreate(Bundle bundle)
 		{
 			TabLayoutResource = Resource.Layout.Tabbar;
